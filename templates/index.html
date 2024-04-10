@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/styles.css')}}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CebLabify</title>
+  </head>
+  <body>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+     
+    </ul>
+
+  
+    <div class="container">
+      <div class="box">
+        
+        <form action="/submit" method="post">
+          <input type="text" name="input" placeholder="Enter a word..." />
+          <div class="searchbutt">
+            <button type="submit">CebLabify</button>
+          </div>
+
+          
+        </form>
+      </div>
+    </div>
+    <div class="syllableResult">
+      <p>Syllabification: <font face="Courier New, Courier, monospace">{{ syllables }}</font></p>
+      <p>Syllabification Pattern: <font face="Courier New, Courier, monospace">{{ sequences }}</font></p>
+
+    </div>
+  </body>
+</html>
